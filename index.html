@@ -20,6 +20,16 @@ function genNumbers(){
     }
     return lottoNumbers;
 }
+
+function checkLogic2(numbers) {
+    var decArea = [0, 0, 0, 0, 0];
+    for(var i=0; i<numbers.length; i++){
+        var area = Math.floor( numbers[i]/10 );
+        decArea[area]++;
+    }
+    return ( decArea[0]>2 || decArea[1]>2 || decArea[2]>2 || decArea[3]>2 || decArea[4]>2 );
+}
+
 window.onload = function(){
     var lottoNumbers = genNumbers();
     // TODO 23,24,25 과 간이 연속으로 3개의 숫자가 나오지 않게 하자!

@@ -19,7 +19,7 @@ b{ display: inline-block; width: 128px; height: 128px; line-height: 128px; borde
 function genNumbers(){
     var lottoNumbers = [];
     while (lottoNumbers.length<6) {
-        var no = Math.round(Math.random()*45);
+        var no = Math.round(Math.random()*45)+1;
         if( lottoNumbers.indexOf(no) === -1 ) lottoNumbers.push(no);
     }
     return lottoNumbers;

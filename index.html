@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>로또번호 추첨기</title>
 <style>
-/* TODO 꾸며주세요 */
+#NUMBERS { margin-top: 40vh; font-size: 5em; color: #fff; text-align: center; }
+b{ display: inline-block; width: 128px; height: 128px; line-height: 128px; border-radius: 64px; margin: 16px; background: #999; }
 </style>
 </head>
 
@@ -47,7 +48,12 @@ window.onload = function(){
     while( checkLogic1(lottoNumbers) ) lottoNumbers=genNumbers();
     // TODO 11,15,17 과 같이 같은 10의 자리수에 3개가 나오지 않게 하자!
     while( checkLogic2(lottoNumbers) ) lottoNumbers=genNumbers();
-    document.getElementById("NUMBERS").innerHTML = lottoNumbers.join(" ");
+
+    var html_lotto = "";
+    for(var i=0; i<lottoNumbers.length; i++){
+      html_lotto += '<b>'+ lottoNumbers[i] +'</b> ';
+    }
+    document.getElementById("NUMBERS").innerHTML = html_lotto;
 }
 </script>
 </body>

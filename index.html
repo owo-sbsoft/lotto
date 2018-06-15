@@ -43,6 +43,7 @@ function checkLogic2(numbers) {
 }
 
 window.onload = function(){
+    // TODO 5번 추첨하도록 수정하기
     var lottoNumbers = genNumbers();
     // 23,24,25 과 간이 연속으로 3개의 숫자가 나오지 않게 하자!
     while( checkLogic1(lottoNumbers) ) lottoNumbers=genNumbers();

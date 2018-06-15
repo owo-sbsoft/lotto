@@ -16,7 +16,7 @@ b{ display: inline-block; width: 128px; height: 128px; line-height: 128px; borde
 <div id="NUMBERS"><div>
 
 <script>
-function genNumbers(){
+function genNumbers(numbers){
     var lottoNumbers = [];
     while (lottoNumbers.length<6) {
         var no = Math.round(Math.random()*45)+1;
@@ -44,9 +44,9 @@ function checkLogic2(numbers) {
 
 window.onload = function(){
     var lottoNumbers = genNumbers();
-    // TODO 23,24,25 과 간이 연속으로 3개의 숫자가 나오지 않게 하자!
+    // 23,24,25 과 간이 연속으로 3개의 숫자가 나오지 않게 하자!
     while( checkLogic1(lottoNumbers) ) lottoNumbers=genNumbers();
-    // TODO 11,15,17 과 같이 같은 10의 자리수에 3개가 나오지 않게 하자!
+    // 11,15,17 과 같이 같은 10의 자리수에 3개가 나오지 않게 하자!
     while( checkLogic2(lottoNumbers) ) lottoNumbers=genNumbers();
 
     var html_lotto = "";
